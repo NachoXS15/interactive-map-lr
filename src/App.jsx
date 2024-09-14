@@ -1,33 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { NavLink } from 'react-router-dom'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='w-full min-h-screen bg-gradient-to-br from-slate-900 to-blue-900  flex flex-col gap-10 justify-center items-center'>
+        <h2 className="text-5xl md:text-6xl font-black text-white text-center uppercase">Bienvenido al Mapa Interactivo <br /> de La Rioja</h2>
+        <NavLink to="/map" className="bg-blue-900 text-white text-2xl p-3 px-7 rounded-full text-center font-bold uppercase hover:scale-110 transition">Comenzar</NavLink>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
